@@ -7,16 +7,13 @@ var config = require('config')
 
 function ircToSlack(channel) {
   return function(from, message, raw) {
-    // console.log(JSON.stringify(Array.prototype.slice.call(arguments)));
-    message = raw.args.slice(1).join(' ');
-
     request.post(
       {
         uri: config.slack.webhook.uri + credentials.slack,
         body: JSON.stringify({
           'channel': channel.slack,
           'username': from + ' via IRC',
-          'icon_url': 'https://en.opensuse.org/images/9/96/Icon-irc.png',
+          'icon_emoji': ':speech_balloon:',
           'text': message
         })
       },
