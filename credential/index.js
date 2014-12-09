@@ -8,6 +8,18 @@
  * messing with fs right now.
  */
 
+var slack;
+
+try {
+  slack = require('./slack')
+} catch (e) {
+  slack = process.env.SLACK_TOKEN
+} finally {
+  if (typeof slack === 'undefined') {
+    throw new Error('Unable to retrieve Slack token from file or env var');
+  }
+}
+
 module.exports = {
-  "slack": require('./slack')
+  "slack": slack
 };
