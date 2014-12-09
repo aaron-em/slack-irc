@@ -2,6 +2,9 @@
   "name": "slack-irc",
   "description": "A Slack IRC relay.",
   "version": "0.0.0",
+  "engines": {
+    "node": "0.10.26"
+  },
   "dependencies": {
     "config": "1.8.1",
     "request": "2.49.0",
