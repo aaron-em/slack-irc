@@ -5,6 +5,7 @@
   "dependencies": {
     "config": "1.8.1",
     "request": "2.49.0",
-    "irc": "git://github.com/aaron-em/node-irc.git"
+    "irc": "git://github.com/aaron-em/node-irc.git",
+    "slack-node": "0.0.93"
   }
 }
