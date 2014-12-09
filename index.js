@@ -5,7 +5,8 @@ var config = require('config')
   , Slack = require('./lib/slack')
   , ircClient
   , slackClient
-  , httpListener;
+  , httpListener
+  , httpPort = process.env.PORT || 3000;
 
 slackClient = new Slack(config, credentials.slack);
 ircClient = new IRC(config);
@@ -24,6 +25,6 @@ httpListener.get('/', function(req, res) {
     .send('Hi there.');
 });
 
-httpListener.listen(80, function() {
-  console.log('Listening for HTTP connections on port 80.');
+httpListener.listen(httpPort, function() {
+  console.log('Listening for HTTP connections on port ' + httpPort + '.');
 });
