@@ -1,18 +1,18 @@
 {
   "channels": [
     {
-      "irc": "#sparkpost",
-      "slack": "#sparkpost-irc"
+      "irc": "#irc-channel",
+      "slack": "#slack-channel"
     }
   ],
   "irc": {
     "host": "irc.freenode.net",
     "port": 6667,
-    "nick": "SparkPost-Slack"
+    "nick": "irc-nick"
   },
   "slack": {
     "webhook": {
-      "uri": "https://hooks.slack.com/services/T024W3ZDA/B0353UB0C/"
+      "uri": "https://example.com/slack-webhook"
     }
   }
 }
